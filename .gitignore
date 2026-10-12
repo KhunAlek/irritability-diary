@@ -1,0 +1,5 @@
+*_backup_*.json
+*_weekly_*.json
+*_daily.csv
+*_recovery.txt
+.DS_Store

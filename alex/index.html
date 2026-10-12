@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#315f51">
+<meta name="description" content="Личный дневник наблюдений. Записи хранятся на этом устройстве.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+<title>Дневник · Алекс</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icon-192.png" type="image/png">
+<style>:root{color-scheme:light;--accent:#315f51;--soft:#eaf2eb;--ink:#253532;--muted:#5c6b66;--paper:#f5f4ee;--line:#dddfe0;--white:#fff;--error:#a73432;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:18px}body{margin:0;background:var(--paper);color:var(--ink);line-height:1.5}main{max-width:680px;margin:auto;padding:24px 18px 120px}button,input,select,textarea{font:inherit}button,.file-button{min-height:44px;border:1px solid var(--line);border-radius:12px;background:white;color:var(--ink);padding:9px 14px;cursor:pointer;line-height:1.35}button:hover{border-color:var(--accent)}button:disabled{opacity:.5;cursor:default}button:focus-visible,input:focus-visible,summary:focus-visible,select:focus-visible,textarea:focus-visible,.file-button:focus-within{outline:3px solid var(--accent);outline-offset:3px}input:not([type=checkbox]):not([type=range]),select,textarea{min-height:46px;width:100%;border:1px solid #abb5b0;border-radius:10px;background:#fff;color:var(--ink);padding:10px;min-width:0}input[type=checkbox]{width:21px;height:21px;accent-color:var(--accent);flex-shrink:0}input[type=range]{width:100%;accent-color:var(--accent);height:44px;margin:2px 0 0;touch-action:pan-y}input:disabled{background:#f0f1ed!important;color:#6c7470}textarea{resize:vertical;min-height:85px}h1,h2,h3,p{margin:0}h1{font-size:1.25rem;font-weight:650;letter-spacing:-.03em}h2{font-size:1.9rem;letter-spacing:-.035em;line-height:1.2}h3{font-size:1.06rem;font-weight:650}p+p{margin-top:8px}.eyebrow{font-size:.65rem;letter-spacing:.16em;font-weight:700;color:var(--muted);margin-bottom:6px}.muted{color:var(--muted);font-size:.85rem}.masthead{display:flex;align-items:center;gap:12px;padding-bottom:16px}.brandmark{background:var(--accent);color:#fff;display:grid;place-items:center;width:44px;height:44px;border-radius:15px;font-size:1.35rem;font-weight:650}.local-badge{margin-left:auto;border:1px solid #c9d4cd;border-radius:20px;color:var(--accent);padding:5px 9px;font-size:.67rem;white-space:nowrap}.connectivity{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:var(--muted);font-size:.75rem;padding-bottom:14px}.connectivity button{font-size:.8rem;min-height:44px;background:var(--soft);border-color:transparent}.notice{background:var(--soft);border:1px solid #c4d5c7;padding:12px 14px;border-radius:12px;font-size:.88rem;margin:4px 0 18px}.notice.error{background:#fff0eb;color:#852b24;border-color:#deb1aa}.date-section{padding:15px 2px 18px}.date-section .muted{margin-top:8px}.date-row{display:flex;gap:6px;margin-top:18px;align-items:center}.date-row input{flex:1;width:auto!important}.date-row button{padding:9px 11px;flex-shrink:0}.icon-button{width:44px;padding:0!important;font-size:1.5rem}.status{font-size:.82rem;color:var(--accent);margin:12px 0 0}.welcome{background:var(--soft);padding:16px;border-radius:14px;margin:0 0 16px}.welcome p{font-size:.87rem;margin:6px 0 12px}.card{padding:20px;background:white;border:1px solid #e2e4dd;border-radius:20px;margin-bottom:14px}.card-head{display:flex;align-items:center;gap:9px;margin-bottom:16px}.section-index{width:26px;height:26px;display:grid;place-items:center;border-radius:8px;color:var(--accent);background:var(--soft);font-size:.75rem;font-weight:700}.field{margin-top:17px}.field:first-child{margin-top:0}.field label:first-child{font-weight:580;font-size:.91rem;display:block}.field .unit{color:var(--muted);font-size:.76rem;font-weight:400}.number-row{display:flex;align-items:center;gap:8px;margin-top:7px}.number-row button{width:44px;flex-shrink:0;padding:0;font-size:1.4rem}.number-row input{text-align:center}.check{display:flex!important;gap:8px;align-items:center;min-height:44px;font-size:.78rem!important;color:var(--muted);font-weight:400!important;cursor:pointer}.scale-top{display:flex;align-items:center;gap:12px}.scale-top label{flex:1}.scale-top input{width:70px!important;text-align:center}.scale-ends{display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted)}.field small{display:block;font-size:.75rem;color:var(--muted)}.inline-help{margin-top:6px;font-size:.76rem;color:var(--muted)}.inline-help summary{min-height:44px;cursor:pointer;display:flex;align-items:center}.inline-help p{background:var(--paper);padding:10px;border-radius:10px}.choices{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}.choice{border-radius:12px;flex:1;min-width:80px}.choice[aria-pressed=true]{background:var(--accent);color:white;border-color:var(--accent)}.compact-details{border-top:1px solid var(--line);margin-top:14px;padding-top:10px}.compact-details>summary{min-height:44px;cursor:pointer;display:flex;align-items:center;gap:6px;font-size:.89rem}.compact-details>summary:after{content:'＋';margin-left:auto;color:var(--accent)}.compact-details[open]>summary:after{content:'−'}.symptom-row{display:flex;align-items:center;gap:8px;padding:6px 0}.symptom-row label{flex:1;font-size:.85rem}.symptom-row select{width:125px;font-size:.83rem}.time-row{display:flex;gap:10px}.time-row label{flex:1;font-weight:400!important;font-size:.75rem!important}.time-row input{margin-top:6px}.validation{color:var(--error);background:#fff0eb;border-radius:12px;padding:14px;margin:0 0 16px;font-size:.85rem}.invalid{outline:2px solid var(--error);outline-offset:2px}.form-actions{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 24px}.form-actions button{font-size:.8rem;background:transparent}.danger-text{color:var(--error)}.accordion{background:#fff;border:1px solid #e2e4dd;border-radius:16px;margin-top:10px;overflow:hidden}.accordion>summary{list-style:none;padding:17px 18px;display:flex;align-items:center;gap:8px;min-height:60px;font-size:.92rem;font-weight:620;cursor:pointer}.accordion>summary::-webkit-details-marker{display:none}.accordion>summary:after{content:'＋';margin-left:auto;color:var(--accent);font-size:1.1rem}.accordion[open]>summary:after{content:'−'}.summary-hint{font-size:.67rem;color:var(--muted);font-weight:400}.accordion-body{padding:0 18px 20px}.accordion-body>label,.accordion-body form>label:not(.check){display:block;font-size:.85rem;font-weight:550;margin:16px 0 7px}.accordion-body>button,.accordion-body>.file-button,.accordion-body form>button,.exchange>button,.exchange>.file-button{width:100%;margin-top:10px}.file-button{display:flex;align-items:center;justify-content:center;text-align:center;font-size:.88rem}.file-button:focus-within{outline:3px solid var(--accent)}.file-button .file-input{display:block!important;position:absolute;width:1px;height:1px;opacity:0;padding:0;border:0}.accordion-body hr{border:0;border-top:1px solid var(--line);margin:24px 0}.accordion-body h3{margin:18px 0 8px}.accordion-body .muted{margin-top:9px}.accordion-body form .muted{margin:10px 0}.recent-days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin:3px 0 12px}.recent-days button{padding:7px 0;border-radius:9px;font-size:.76rem;min-width:0}.recent-days small{display:block;font-size:.58rem}.recent-days button.saved{background:var(--soft);border-color:#acc3b7}.recent-days button.insufficient{background:#f2f0fd;border-style:dashed}.recent-days button.draft{border-color:#b18434;background:#fff5df}.history-row{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;text-align:left;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:12px 0}.history-row small{color:var(--muted);font-size:.74rem;text-align:right}.metric-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:14px}.metric-tile{padding:14px 12px;background:var(--soft);border-radius:13px}.metric-tile small{color:var(--muted);font-size:.74rem;display:block}.metric-value{font-size:1.6rem;letter-spacing:-.04em;line-height:1.25;margin:7px 0}.metric-delta{font-size:.73rem;color:var(--accent);margin-top:6px}.metric-tile.wide{grid-column:1/-1}.report-tag{display:inline-block;font-size:.72rem;color:var(--accent);background:var(--soft);border-radius:6px;padding:3px 7px;margin-top:12px}.comparison{border-top:1px solid var(--line);margin-top:18px;padding-top:2px}.table-wrap{width:100%;overflow-x:auto;margin-top:10px}table{border-collapse:collapse;width:100%;font-size:.78rem;table-layout:fixed}td,th{text-align:left;padding:10px 4px;vertical-align:top;border-bottom:1px solid var(--line);overflow-wrap:anywhere}th{font-size:.7rem;color:var(--muted);font-weight:550}td:first-child,th:first-child{width:51%}.exchange{margin-top:22px;padding-top:1px;border-top:1px solid var(--line)}.back-to-form{background:var(--paper)!important}.spark-chart{display:flex;align-items:flex-end;gap:4px;min-height:90px;margin:16px 0 8px}.spark-item{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:110px;gap:4px}.spark-item .bar{width:75%;border-radius:5px 5px 0 0;background:var(--accent);min-height:2px}.spark-item .missing-bar{background:transparent;border-bottom:2px dashed #84918a;width:75%;height:2px}.spark-item small{font-size:.62rem;color:var(--muted)}.spark-item span{font-size:.65rem}.save-bar{position:fixed;bottom:0;left:0;right:0;display:flex;align-items:center;gap:12px;justify-content:space-between;background:rgba(245,244,238,.98);border-top:1px solid var(--line);padding:12px max(18px,calc((100vw - 644px)/2)) calc(12px + env(safe-area-inset-bottom));z-index:10}.save-bar strong{display:block;font-size:.79rem;font-weight:600}.save-bar small{display:block;color:var(--muted);font-size:.64rem;max-width:220px}.save-bar button{background:var(--accent);color:white;border:0;padding:13px 21px;font-weight:600;min-height:48px}.save-bar[hidden]{display:none}footer{text-align:center;color:var(--muted);font-size:.75rem;padding:27px 5px}footer small{display:block;margin-top:8px;font-size:.67rem}[hidden]{display:none!important}
+@media(max-width:380px){main{padding:17px 12px 115px}.card{padding:17px 14px}.masthead{gap:9px}h1{font-size:1.1rem}.local-badge{font-size:.6rem;padding:4px 7px}.date-row{gap:4px}.date-row button{padding:9px 7px;font-size:.8rem}.icon-button{font-size:1.5rem!important}.date-row input{padding:8px 4px!important;font-size:.83rem}.summary-hint{display:none}.accordion-body{padding:0 14px 18px}.recent-days{gap:3px}.save-bar{padding-left:12px;padding-right:12px}.save-bar small{max-width:150px}.metric-tile{padding:12px 10px}.symptom-row select{width:110px}.recent-days{grid-template-columns:repeat(4,1fr)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+dialog{max-width:420px;width:calc(100% - 32px);border:1px solid var(--line);border-radius:18px;padding:22px;color:var(--ink);background:var(--white)}dialog::backdrop{background:rgba(30,45,40,.4)}dialog p{margin:13px 0;font-size:.9rem}dialog label{display:block;font-size:.85rem;margin-top:15px}dialog input{margin-top:8px}.confirmation-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:20px;flex-wrap:wrap}#confirmation-accept{background:var(--accent);color:white;border-color:var(--accent)}
+</style>
+</head>
+<body>
+<main>
+  <header class="masthead"><div class="brandmark" aria-hidden="true">А</div><div><p class="eyebrow">ЛИЧНЫЕ НАБЛЮДЕНИЯ</p><h1>Дневник · Алекс</h1></div><span class="local-badge">На телефоне</span></header>
+  <div class="connectivity"><span id="offline-status">Проверяем офлайн-доступ…</span><button id="install" hidden>Установить</button><button id="update" hidden>Обновить приложение</button></div>
+  <aside id="notice" class="notice" role="status" aria-live="polite" hidden></aside>
+  <section class="date-section" aria-label="Дата записи"><p class="eyebrow">ОДИН ДЕНЬ, ОДНА ЗАПИСЬ</p><h2 id="date-heading"></h2><p id="phase" class="muted"></p><div class="date-row"><button id="previous" class="icon-button" aria-label="Предыдущий день">‹</button><input id="record-date" type="date" aria-label="Выбрать дату записи"><button id="next" class="icon-button" aria-label="Следующий день">›</button><button id="today-button">Сегодня</button></div><p id="record-status" class="status" aria-live="polite"></p></section>
+  <div id="first-run" class="welcome" hidden><strong>Начните с дат наблюдения</strong><p>Укажите начало наблюдения в настройках ниже. Дату начала препарата можно добавить позже.</p><button id="setup-button">Указать даты</button></div>
+  <form id="daily-form" novalidate><div id="form-fields"></div><p id="validation" class="validation" role="alert" hidden></p><div class="form-actions"><button type="button" id="discard">Отменить изменения</button><button type="button" id="delete-record" class="danger-text" hidden>Удалить этот день</button></div></form>
+  <section class="lower-sections" aria-label="История, итоги и настройки">
+    <details id="history-section" class="accordion"><summary>Мой журнал <span class="summary-hint" id="history-count"></span></summary><div class="accordion-body"><div id="recent-days" class="recent-days"></div><p class="muted">Нажмите день, чтобы изменить свою запись.</p><div id="history-list"></div><button id="more-history" hidden>Показать ещё</button><button class="back-to-form">К записи ↑</button></div></details>
+    <details id="stats-section" class="accordion"><summary>Недельные итоги <span class="summary-hint">свои и общие</span></summary><div class="accordion-body"><label for="period-select">Период</label><select id="period-select"></select><div id="stats-content"></div><div class="exchange"><h3>Обмен недельными итогами</h3><p class="muted">Передайте друг другу файл завершённых недель. Он содержит средние и число оценок, без ежедневных записей, заметок, доз и симптомов.</p><button id="share-weekly">Поделиться итогами</button><button id="export-weekly">Скачать итоги</button><label class="file-button" for="import-weekly">Открыть итоги другого пользователя<input type="file" id="import-weekly" accept=".json,application/json" class="file-input"></label><p id="partner-status" class="muted"></p><button id="clear-partner" hidden>Удалить импортированные итоги</button></div><button class="back-to-form">К записи ↑</button></div></details>
+    <details id="settings-section" class="accordion"><summary>Настройки и резервная копия</summary><div class="accordion-body"><p class="muted">Asia/Bangkok · UTC+7. Укажите одинаковые даты на обоих телефонах.</p><form id="settings-form"><label for="observation-start">Начало наблюдения</label><input type="date" id="observation-start" required><label for="therapy-start">Фактическое начало препарата <span class="muted">необязательно</span></label><input type="date" id="therapy-start"><p class="muted">Исходное окно — 7 дней перед этой датой. Недели терапии отсчитываются от неё. Даты не назначают приём препарата.</p><label id="goal-label" class="check"><input type="checkbox" id="personal-goal">Показывать личную цель −30% интенсивности</label><button type="submit">Сохранить даты</button></form><hr><h3>Ваши данные</h3><p id="backup-reminder" class="muted"></p><button id="backup">Скачать резервную копию JSON</button><label class="file-button" for="restore">Восстановить свою копию<input type="file" id="restore" accept=".json,application/json" class="file-input"></label><button id="csv">Скачать свои записи CSV</button><button id="weekly-csv">Скачать недельные значения CSV</button><button id="persistent-storage">Защитить хранение от автоматической очистки</button><p class="muted">Записи не отправляются на GitHub. Очистка данных Chrome или потеря телефона может удалить дневник. Храните резервную копию отдельно. Блокировка телефона защищает доступ к записям; входа в аккаунт здесь нет.</p><button id="raw-recovery" hidden>Скачать данные для восстановления</button><hr><h3>Установка на POCO</h3><p class="muted">Откройте эту страницу в Chrome. Меню ⋮ → «Установить и создать ярлык» → «Установить». В некоторых версиях — «Добавить на главный экран». Дождитесь статуса «Готово к офлайн» и дальше открывайте дневник через его значок.</p><button id="delete-all" class="danger-text">Удалить все данные этого дневника</button><button class="back-to-form" type="button">К записи ↑</button></div></details>
+  </section>
+  <footer>Наблюдения помогают видеть изменения.<br>Приложение не делает медицинских выводов.<br><small>Версия 1.0 · данные на вашем устройстве</small></footer>
+</main>
+<div id="save-bar" class="save-bar"><div><strong id="save-label">Запись за сегодня</strong><small id="save-hint">Сохранение только на этом устройстве</small></div><button id="save" type="submit" form="daily-form">Сохранить</button></div>
+<dialog id="confirmation" aria-labelledby="confirmation-title"><form id="confirmation-form"><h3 id="confirmation-title">Подтверждение</h3><p id="confirmation-message"></p><label id="confirmation-phrase-label" hidden>Для подтверждения:<input id="confirmation-phrase" type="text" autocomplete="off"></label><p id="confirmation-error" class="danger-text" hidden>Введите слово точно, как указано.</p><div class="confirmation-actions"><button id="confirmation-cancel" type="button">Отмена</button><button id="confirmation-accept" type="submit">Подтвердить</button></div></form></dialog>
+<script>const ROLE = 'alex';
+'use strict';
+const NAME = ROLE === 'alex' ? 'Алекс' : 'Оля';
+const OTHER = ROLE === 'alex' ? 'olga' : 'alex';
+const KEY = 'irritability-diary:v1:' + location.pathname.replace(/index\.html$/, '') + ':' + ROLE;
+const DAY = 86400000;
+const $ = id => document.getElementById(id);
+const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+function today(instant = new Date()) {
+  const parts = new Intl.DateTimeFormat('en-CA', {timeZone:'Asia/Bangkok', year:'numeric', month:'2-digit', day:'2-digit'}).formatToParts(instant);
+  const get = type => parts.find(p => p.type === type).value;
+  return `${get('year')}-${get('month')}-${get('day')}`;
+}
+function validDate(d) { return typeof d === 'string' && /^20\d\d-\d\d-\d\d$/.test(d) && Number.isFinite(Date.parse(d+'T00:00:00Z')) && new Date(d+'T00:00:00Z').toISOString().slice(0,10) === d; }
+function addDays(d, n) { return new Date(Date.parse(d+'T00:00:00Z') + n*DAY).toISOString().slice(0,10); }
+function dayDiff(a, b) { return Math.round((Date.parse(a+'T00:00:00Z')-Date.parse(b+'T00:00:00Z'))/DAY); }
+function dateText(d, short=false) { return new Intl.DateTimeFormat('ru-RU',{day:'numeric',month:short?'short':'long', ...(short?{}:{year:'numeric'}),timeZone:'UTC'}).format(new Date(d+'T12:00:00Z')); }
+function numberText(n) { return n == null ? '—' : new Intl.NumberFormat('ru-RU',{maximumFractionDigits:1}).format(n); }
+function ownSettings() { return {observationStart:today(),therapyStart:'',goal:false,configured:false}; }
+function blankData() { return {version:1,role:ROLE,settings:ownSettings(),records:{},drafts:{},partner:null,lastBackup:null}; }
+const FIELDS = {
+  alex:[['episodes','Число эпизодов','раз'],['intensity','Максимальная интенсивность','0–10',10],['longest','Самый продолжительный эпизод','мин'],['rumination','Мысленное возвращение к неприятным ситуациям','мин за день'],['calming','Трудность внутреннего успокоения','0–10',10],['nightSleep','Ночной сон','мин',1440],['daySleep','Дневной сон','мин',1440],['pain','Средняя хроническая боль','0–10',10]],
+  olga:[['sharp','Резкие ответы','раз'],['interruptions','Заметные перебивания','раз'],['sarcasm','Язвительные / саркастические замечания','раз'],['visible','Максимальная заметная раздражительность','0–10',10],['duration','Продолжительность заметной раздражительности','мин за день'],['atmosphere','Влияние на семейную атмосферу','0–10',10]]
+};
+const SHARE_KEYS={alex:['episodes','intensity','longest','rumination','calming'],olga:FIELDS.olga.map(f=>f[0])};
+const PRIMARY={alex:['intensity','longest','episodes'],olga:['visible','sharp','atmosphere']};
+const SYMPTOMS=[['nausea','Тошнота'],['headache','Головная боль'],['anxiety','Возбуждение / тревога'],['sleep','Ухудшение сна'],['sexual','Сексуальные изменения'],['other','Другое']];
+const SCALE_HELP={intensity:'0 — нет · 2 — лёгкое недовольство · 4 — заметно, но не мешает · 6 — трудно переключиться · 8 — приходится сдерживаться · 10 — практически невыносимо.',visible:'0 — нет проявлений · 2 — нетерпение · 4 — заметная резкость · 6 — частые резкие ответы · 8 — мешает общению · 10 — обычное общение невозможно.',atmosphere:'0 — совершенно не мешало · 5 — заметно ухудшало общение · 10 — серьёзно нарушало семейную жизнь.'};
+let data, selectedDate=today(), loadedRevision=null, draftTimer, editingDirty=false, storageBlocked=false, historyLimit=30, installPrompt=null, offlineReady=false;
+function notice(message, error=false) { $('notice').textContent=message; $('notice').className='notice'+(error?' error':''); $('notice').hidden=false; }
+let pendingConfirmation=false;
+async function askConfirm(message, phrase='') {
+  if(pendingConfirmation)return false;
+  pendingConfirmation=true;
+  const dialog=$('confirmation');
+  $('confirmation-message').textContent=message;
+  $('confirmation-phrase-label').hidden=!phrase;
+  $('confirmation-phrase').value='';
+  $('confirmation-phrase-label').firstChild.textContent=phrase?'Для подтверждения введите '+phrase+': ':'';
+  $('confirmation-error').hidden=true;
+  return await new Promise(resolve=>{
+    const finish=result=>{dialog.close();pendingConfirmation=false;resolve(result);};
+    $('confirmation-cancel').onclick=()=>finish(false);
+    dialog.oncancel=event=>{event.preventDefault();finish(false);};
+    $('confirmation-form').onsubmit=event=>{event.preventDefault();if(phrase&&$('confirmation-phrase').value!==phrase){$('confirmation-error').hidden=false;$('confirmation-phrase').focus();return;}finish(true);};
+    dialog.showModal();
+    if(phrase)$('confirmation-phrase').focus();else $('confirmation-cancel').focus();
+  });
+}
+function parseStore() {
+  const raw=localStorage.getItem(KEY);
+  if (!raw) return blankData();
+  const parsed=JSON.parse(raw);
+  if(parsed.version!==1 || parsed.role!==ROLE || !parsed.settings || !parsed.records || !parsed.drafts || Array.isArray(parsed.records) || Array.isArray(parsed.drafts)) throw Error('Повреждён формат локальных данных.');
+  return parsed;
+}
+function transact(change) {
+  if(storageBlocked) throw Error('Хранилище недоступно. Сначала восстановите данные из копии.');
+  const next=JSON.parse(JSON.stringify(parseStore()));
+  change(next);
+  localStorage.setItem(KEY,JSON.stringify(next));
+  data=next;
+}
+function fieldHTML(f) {
+  const [key,label,unit,max]=f;
+  if(key==='nightSleep') return `<div class="field" data-field="${key}"><label>Ночной сон <span class="unit">ночь к этой дате</span></label><div class="time-row"><label for="night-hours">Часы<input id="night-hours" type="number" inputmode="numeric" min="0" max="24" step="1" placeholder="—"></label><label for="night-minutes">Минуты<input id="night-minutes" type="number" inputmode="numeric" min="0" max="59" step="1" placeholder="—"></label></div><label class="check"><input type="checkbox" id="unknown-nightSleep" data-unknown="nightSleep">Не могу оценить</label></div>`;
+  const isScale=max===10;
+  return `<div class="field" data-field="${key}">${isScale?`<div class="scale-top"><label for="${key}">${label} <span class="unit">${unit}</span></label><input id="${key}" type="number" inputmode="numeric" min="0" max="10" step="1" placeholder="—"></div><input type="range" id="range-${key}" min="0" max="10" step="1" value="0" aria-label="${label}, шкала от 0 до 10"><div class="scale-ends"><span>0</span><span>10</span></div>`:`<label for="${key}">${label} <span class="unit">${unit}</span></label><div class="number-row"><button type="button" data-step="-1" data-key="${key}" aria-label="Уменьшить: ${label}">−</button><input id="${key}" type="number" inputmode="numeric" min="0" ${max?`max="${max}"`:''} step="1" placeholder="—"><button type="button" data-step="1" data-key="${key}" aria-label="Увеличить: ${label}">+</button></div>`}<label class="check"><input type="checkbox" id="unknown-${key}" data-unknown="${key}">Не могу оценить</label>${SCALE_HELP[key]?`<details class="inline-help"><summary>Подсказка к шкале</summary><p>${SCALE_HELP[key]}</p></details>`:''}</div>`;
+}
+function card(index,title,body) { return `<section class="card"><div class="card-head"><span class="section-index">${index}</span><h3>${title}</h3></div>${body}</section>`; }
+function choiceHTML(key, choices) { return `<div class="choices" role="group" aria-label="${key==='observed'?'Достаточно наблюдала сегодня?':key==='medication'?'Приём препарата':'Побочные эффекты'}">${choices.map(([val,label])=>`<button type="button" class="choice" data-choice="${key}" data-value="${val}" aria-pressed="false">${label}</button>`).join('')}</div><input type="hidden" id="choice-${key}">`; }
+function renderForm() {
+  if(ROLE==='alex') {
+    $('form-fields').innerHTML=card('01','Раздражение',FIELDS.alex.slice(0,5).map(fieldHTML).join(''))+card('02','Сон и боль',FIELDS.alex.slice(5).map(fieldHTML).join(''))+card('03','Приём препарата',choiceHTML('medication',[['taken','Принимал'],['not-taken','Не принимал'],['unknown','Не могу подтвердить']])+`<div id="medication-fields" hidden><button type="button" id="use-medication" hidden>Подтвердить прошлые название и дозу</button><div class="field"><label for="medication-name">Название препарата</label><input id="medication-name" type="text" maxlength="100" autocomplete="off"></div><div class="field"><label for="medication-dose">Фактически принято за день <span class="unit">мг</span></label><input id="medication-dose" type="text" inputmode="decimal" placeholder="Например, 5 или 2,5" maxlength="30"></div></div><label id="missed-label" class="check" hidden><input type="checkbox" id="missed">Это был пропуск</label><p class="muted">Только факт приёма одного препарата. Название и доза не переносятся без подтверждения.</p>`)+card('04','Побочные эффекты',choiceHTML('sideEffects',[['none','Нет'],['present','Есть'],['unknown','Не могу оценить']])+`<div id="symptoms" hidden>${SYMPTOMS.map(([key,label])=>`<div class="symptom-row"><label for="symptom-${key}">${label}</label><select id="symptom-${key}"><option value="0">Нет</option><option value="1">Слабая</option><option value="2">Умеренная</option><option value="3">Сильная</option></select></div>`).join('')}<div class="field"><label for="effects-note">Комментарий <span class="unit">необязательно</span></label><textarea id="effects-note" maxlength="500"></textarea></div></div>`)+card('＋','Дополнительно',`<details class="compact-details"><summary>Заметка и время кофе</summary><div class="field"><label for="note">Заметка <span class="unit">до 500 символов</span></label><textarea id="note" maxlength="500"></textarea></div><div class="field"><label for="coffee">Время последнего кофе</label><input id="coffee" type="time"></div></details>`);
+  } else {
+    $('form-fields').innerHTML=card('01','Достаточно наблюдала сегодня?',`<p class="muted">Отмечайте то, что наблюдали в общении.</p>${choiceHTML('observed',[['yes','Да'],['no','Нет']])}<p id="not-observed" class="notice" hidden>Сохраните день без оценок: «Недостаточно наблюдений».</p>`)+`<div id="observation-fields" hidden>${card('02','Наблюдаемое поведение',FIELDS.olga.slice(0,3).map(fieldHTML).join(''))+card('03','Раздражительность и атмосфера',FIELDS.olga.slice(3).map(fieldHTML).join(''))}</div>`+card('＋','Дополнительно',`<details class="compact-details"><summary>Короткая заметка</summary><div class="field"><label for="note">Заметка <span class="unit">до 500 символов</span></label><textarea id="note" maxlength="500"></textarea></div></details>`);
+  }
+  $('daily-form').addEventListener('input',onInput);
+  $('daily-form').addEventListener('change',onChange);
+  $('daily-form').addEventListener('click',onFormClick);
+  for(const [key,,,max] of FIELDS[ROLE]) if(max===10) $('range-'+key).addEventListener('pointerup',()=>{if(!$('range-'+key).disabled){$(key).value=$('range-'+key).value;markDirty();}});
+}
+function pickChoice(key,val) {
+  $('choice-'+key).value=val||'';
+  document.querySelectorAll(`[data-choice="${key}"]`).forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.value===val)));
+  if(key==='observed') {$('observation-fields').hidden=val!=='yes';$('not-observed').hidden=val!=='no';}
+  if(key==='medication') {$('medication-fields').hidden=val!=='taken';$('missed-label').hidden=val!=='not-taken';}
+  if(key==='sideEffects') $('symptoms').hidden=val!=='present';
+}
+function controlsFor(key) { return key==='nightSleep'?[$('night-hours'),$('night-minutes')]:[$(key),$('range-'+key),...document.querySelectorAll(`[data-key="${key}"]`)].filter(Boolean); }
+function toggleUnknown(key) { const disabled=$('unknown-'+key).checked; controlsFor(key).forEach(el=>el.disabled=disabled); }
+async function onInput(event) {
+  const id=event.target.id;
+  if(id.startsWith('range-')) $(id.slice(6)).value=event.target.value;
+  else if($('range-'+id)) $('range-'+id).value=event.target.value || 0;
+  if(id==='episodes')await applyZeroEpisodes();
+  markDirty();
+}
+async function applyZeroEpisodes() {
+  if($('episodes')?.value==='0' && !$('unknown-episodes').checked) {
+    const keys=['intensity','longest','calming'];
+    const nonzero=keys.some(k=>Number($(k).value)>0);
+    if(!nonzero || await askConfirm('Эпизодов 0. Установить интенсивность, продолжительность и трудность успокоения в 0?')) {
+      for(const key of keys){$(key).value='0';$('unknown-'+key).checked=false;toggleUnknown(key);if($('range-'+key))$('range-'+key).value=0;}
+    }
+  }
+}
+async function onChange(event) {
+  if(event.target.dataset.unknown) toggleUnknown(event.target.dataset.unknown);
+  if(event.target.dataset.unknown==='episodes')await applyZeroEpisodes();
+  markDirty();
+}
+async function onFormClick(event) {
+  const step=event.target.closest('[data-step]');
+  if(step) {const input=$(step.dataset.key);const max=input.max?Number(input.max):Infinity;input.value=Math.min(max,Math.max(0,(input.value===''?0:Number(input.value))+Number(step.dataset.step)));input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}));}
+  const choice=event.target.closest('[data-choice]');
+  if(choice) {
+    if(choice.dataset.choice==='observed' && choice.dataset.value==='no' && $('choice-observed').value==='yes' && data.records[selectedDate]?.observedEnough && !await askConfirm('После сохранения «Нет» числовые оценки этого дня будут удалены. Продолжить?'))return;
+    pickChoice(choice.dataset.choice,choice.dataset.value);markDirty();
+  }
+  if(event.target.id==='use-medication') {
+    const prior=latestMedication();if(prior){$('medication-name').value=prior.medication.name;$('medication-dose').value=prior.medication.dose;markDirty();}
+  }
+}
+function latestMedication() { return Object.keys(data.records).filter(d=>d<selectedDate && data.records[d].medication?.status==='taken').sort().reverse().map(d=>data.records[d])[0]; }
+function rawForm() {
+  const raw={values:{},unknown:[],note:$('note').value};
+  for(const [key] of FIELDS[ROLE]) {
+    if($('unknown-'+key).checked)raw.unknown.push(key);
+    if(key==='nightSleep') raw.values[key]={hours:$('night-hours').value,minutes:$('night-minutes').value};
+    else raw.values[key]=$(key).value;
+  }
+  if(ROLE==='alex'){raw.medication={status:$('choice-medication').value,name:$('medication-name').value,dose:$('medication-dose').value,missed:$('missed').checked};raw.sideEffects={status:$('choice-sideEffects').value,symptoms:Object.fromEntries(SYMPTOMS.map(([key])=>[key,$('symptom-'+key).value])),note:$('effects-note').value};raw.coffee=$('coffee').value;}
+  else raw.observed=$('choice-observed').value;
+  return raw;
+}
+function markDirty() {
+  editingDirty=true;clearTimeout(draftTimer);draftTimer=setTimeout(flushDraft,180);updateRecordStatus();
+}
+function flushDraft() {
+  clearTimeout(draftTimer);if(!editingDirty)return true;
+  try {const raw=rawForm();transact(next=>{next.drafts[selectedDate]={raw,baseRevision:loadedRevision,updatedAt:new Date().toISOString()};});updateRecordStatus();return true;}
+  catch(error){notice('Черновик не сохранён: '+error.message+' Скопируйте введённые значения перед закрытием.',true);return false;}
+}
+function fillRaw(raw) {
+  for(const [key] of FIELDS[ROLE]){
+    const val=raw.values?.[key];
+    if(key==='nightSleep'){$('night-hours').value=val?.hours??'';$('night-minutes').value=val?.minutes??'';}
+    else $(key).value=typeof val==='string'||typeof val==='number'?val:'';
+    $('unknown-'+key).checked=raw.unknown?.includes(key)||false;toggleUnknown(key);if($('range-'+key))$('range-'+key).value=$(key).value||0;
+  }
+  $('note').value=raw.note||'';
+  if(ROLE==='alex'){
+    pickChoice('medication',raw.medication?.status);$('medication-name').value=raw.medication?.name||'';$('medication-dose').value=raw.medication?.dose??'';$('missed').checked=raw.medication?.missed||false;
+    pickChoice('sideEffects',raw.sideEffects?.status);for(const [key]of SYMPTOMS)$('symptom-'+key).value=raw.sideEffects?.symptoms?.[key]||0;$('effects-note').value=raw.sideEffects?.note||'';$('coffee').value=raw.coffee||'';
+    const previous=latestMedication();$('use-medication').hidden=!previous;if(previous)$('use-medication').textContent=`Подтвердить: ${previous.medication.name}, ${numberText(previous.medication.dose)} мг`;
+  }else pickChoice('observed',raw.observed);
+}
+function recordToRaw(record) {
+  const raw={values:{},unknown:[],note:record.note};
+  for(const [key]of FIELDS[ROLE]){const value=record.values[key];if(value===null&&(ROLE==='alex'||record.observedEnough))raw.unknown.push(key);raw.values[key]=key==='nightSleep'?{hours:value==null?'':String(Math.floor(value/60)),minutes:value==null?'':String(value%60)}:(value??'');}
+  if(ROLE==='alex'){raw.medication={...record.medication,dose:record.medication.dose??''};raw.sideEffects={...record.sideEffects};raw.coffee=record.coffee;}
+  else raw.observed=record.observedEnough?'yes':'no';
+  return raw;
+}
+async function loadDate(date, skipFlush=false) {
+  if(!validDate(date)||date>today())return;
+  if(!skipFlush && !flushDraft())return;
+  try {if(!storageBlocked)data=parseStore();}catch(error){storageBlocked=true;notice(error.message,true);}
+  const oldDate=selectedDate;editingDirty=false;selectedDate=date;loadedRevision=data.records[date]?.revision??null;
+  const record=data.records[date],draft=data.drafts[date];let raw=record?recordToRaw(record):{values:{}};
+  if(draft){
+    if(draft.baseRevision===(record?.revision??null)) {raw=draft.raw;loadedRevision=draft.baseRevision;}
+    else if(await askConfirm('Для этой даты есть черновик и более новая сохранённая запись. Восстановить черновик? При сохранении потребуется подтверждение замены.')){raw=draft.raw;loadedRevision=draft.baseRevision;}
+    else {try{transact(next=>delete next.drafts[date]);}catch(error){notice(error.message,true);}}
+  }
+  fillRaw(raw);editingDirty=Boolean(data.drafts[date] && raw===data.drafts[date].raw); // Also set below: parsing clones may change object identity.
+  if(draft && raw===draft.raw)editingDirty=true;
+  $('record-date').value=date;$('record-date').max=today();$('next').disabled=date>=today();$('date-heading').textContent=dateText(date);$('save-label').textContent=date===today()?'Запись за сегодня':'Запись за '+dateText(date,true);
+  $('validation').hidden=true;document.querySelectorAll('.invalid').forEach(el=>el.classList.remove('invalid'));$('delete-record').hidden=!record;updateRecordStatus();renderHistory();renderPhase();
+  if(oldDate!==date && data.drafts[oldDate])notice('Черновик за '+dateText(oldDate,true)+' сохранён на этом устройстве.');
+}
+function updateRecordStatus() {
+  const record=data?.records[selectedDate];
+  if(editingDirty)$('record-status').textContent='Черновик · есть несохранённые изменения';
+  else if(record)$('record-status').textContent=(ROLE==='olga'&&!record.observedEnough?'Недостаточно наблюдений':'Сохранено на этом устройстве')+' · '+new Intl.DateTimeFormat('ru-RU',{hour:'2-digit',minute:'2-digit',timeZone:'Asia/Bangkok'}).format(new Date(record.updatedAt));
+  else $('record-status').textContent='Этот день ещё не заполнен';
+  $('save-hint').textContent=editingDirty?'Нажмите, чтобы сохранить запись':'Сохранение только на этом устройстве';
+}
+function validateForm() {
+  const raw=rawForm(),errors=[],record={date:selectedDate,values:{},note:raw.note};
+  const fail=(id,message)=>errors.push({id,message});
+  if(ROLE==='olga' && !raw.observed)fail('choice-observed','Выберите, достаточно ли было наблюдений.');
+  const needsValues=ROLE==='alex'||raw.observed==='yes';
+  for(const [key,label,,max] of FIELDS[ROLE]) {
+    if(!needsValues||raw.unknown.includes(key)){record.values[key]=null;continue;}
+    let value;
+    if(key==='nightSleep'){
+      const h=raw.values[key].hours,m=raw.values[key].minutes;
+      if(h===''||m===''){fail('night-hours','Для ночного сна укажите часы и минуты (включая 0) или «Не могу оценить».');continue;}
+      if(!Number.isInteger(Number(h))||!Number.isInteger(Number(m))||Number(h)<0||Number(h)>24||Number(m)<0||Number(m)>59){fail('night-hours','Проверьте часы и минуты сна.');continue;}
+      value=Number(h)*60+Number(m);
+    }else{const str=raw.values[key];if(str===''){fail(key,'Заполните «'+label+'» или выберите «Не могу оценить».');continue;}value=Number(str);}
+    if(!Number.isSafeInteger(value)||value<0||(max&&value>max)){fail(key==='nightSleep'?'night-hours':key,'Недопустимое значение: '+label+'.');continue;}
+    record.values[key]=value;
+  }
+  if(ROLE==='alex'){
+    if(record.values.nightSleep!=null && record.values.daySleep!=null && record.values.nightSleep+record.values.daySleep>1440)fail('daySleep','Ночной и дневной сон вместе не могут превышать 24 часа.');
+    const med=raw.medication;record.medication={status:med.status,name:'',dose:null,missed:med.status==='not-taken'&&med.missed};
+    if(!med.status)fail('choice-medication','Отметьте факт приёма препарата.');
+    if(med.status==='taken'){
+      const dose=med.dose.trim().replace(',','.');
+      if(!med.name.trim())fail('medication-name','Введите название препарата.');
+      if(!/^\d+(\.\d+)?$/.test(dose)||!Number.isFinite(Number(dose))||Number(dose)<=0)fail('medication-dose','Укажите положительную дозу в мг.');
+      record.medication.name=med.name.trim();record.medication.dose=Number(dose);
+    }
+    const effects=raw.sideEffects;record.sideEffects={status:effects.status,symptoms:{},note:effects.status==='present'?effects.note:''};
+    if(!effects.status)fail('choice-sideEffects','Отметьте наличие побочных эффектов.');
+    if(effects.status==='present'){
+      for(const [key]of SYMPTOMS)if(Number(effects.symptoms[key])>0)record.sideEffects.symptoms[key]=Number(effects.symptoms[key]);
+      if(!Object.keys(record.sideEffects.symptoms).length)fail('symptom-nausea','Отметьте хотя бы один симптом и его тяжесть.');
+    }
+    record.coffee=raw.coffee;
+  }else record.observedEnough=raw.observed==='yes';
+  return {record,errors};
+}
+async function saveRecord(event) {
+  event.preventDefault();clearTimeout(draftTimer);const {record,errors}=validateForm();document.querySelectorAll('.invalid').forEach(el=>el.classList.remove('invalid'));
+  if(errors.length){$('validation').textContent=errors[0].message;$('validation').hidden=false;const el=$(errors[0].id);if(el){const target=el.type==='hidden'?el.previousElementSibling:el;target.classList.add('invalid');target.scrollIntoView({block:'center'});if(el.type!=='hidden')el.focus();}flushDraft();return;}
+  $('save').disabled=true;
+  try {
+    const current=parseStore().records[selectedDate];
+    if((current?.revision??null)!==loadedRevision && !await askConfirm('Запись изменена в другом окне. Заменить её текущей формой?')){notice('Сохранение отменено. Черновик остаётся; выберите дату заново для загрузки записи.');flushDraft();return;}
+    transact(next=>{const now=new Date().toISOString();next.records[selectedDate]={...record,createdAt:next.records[selectedDate]?.createdAt||now,updatedAt:now,revision:(next.records[selectedDate]?.revision||0)+1};delete next.drafts[selectedDate];});
+    editingDirty=false;loadedRevision=data.records[selectedDate].revision;$('validation').hidden=true;notice('Запись сохранена на этом устройстве.');$('delete-record').hidden=false;updateRecordStatus();renderHistory();renderStats();
+  }catch(error){notice('Не удалось сохранить: '+error.message+' Введённые значения остаются в форме.',true);}
+  finally{$('save').disabled=false;}
+}
+function periods(settings=data.settings, date=today()) {
+  const list=[];
+  if(settings.therapyStart){const start=settings.therapyStart;list.push({key:'baseline',start:addDays(start,-7),end:addDays(start,-1),label:'Исходный период'});for(let i=0;i<=Math.floor(dayDiff(date,start)/7);i++)list.push({key:'therapy-'+(i+1),start:addDays(start,i*7),end:addDays(start,i*7+6),label:'Неделя терапии '+(i+1)});}
+  else for(let i=0;i<=Math.floor(dayDiff(date,settings.observationStart)/7);i++)list.push({key:'observation-'+(i+1),start:addDays(settings.observationStart,i*7),end:addDays(settings.observationStart,i*7+6),label:'Неделя наблюдения '+(i+1)});
+  return list;
+}
+function summarize(p, role=ROLE, records=data.records) {
+  const rows=Object.entries(records).filter(([date])=>date>=p.start&&date<=p.end).map(([,r])=>r);
+  const observed=rows.filter(r=>role==='alex'||r.observedEnough);
+  const result={key:p.key,start:p.start,end:p.end,label:p.label,savedDays:rows.length,observedDays:observed.length,completeDays:0,partialDays:0,metrics:{}};
+  for(const [key]of FIELDS[role]){const values=observed.map(r=>r.values[key]).filter(v=>typeof v==='number');const sum=values.reduce((a,b)=>a+b,0);result.metrics[key]={n:values.length,sum,mean:values.length?sum/values.length:null};}
+  result.completeDays=observed.filter(r=>FIELDS[role].every(([key])=>typeof r.values[key]==='number')).length;result.partialDays=observed.length-result.completeDays;
+  if(role==='alex'){result.effectsDays=rows.filter(r=>r.sideEffects.status==='present').length;result.effectsKnownDays=rows.filter(r=>r.sideEffects.status!=='unknown').length;}
+  return result;
+}
+function delta(metric,base,closed) {
+  if(!closed)return 'Сравнение после завершения недели';
+  if(!base)return 'Нет исходного периода';
+  if(metric.n<5 || base.n<5)return 'Недостаточно данных для сравнения (нужно ≥5 из 7)';
+  const absolute=metric.mean-base.mean;
+  if(base.mean===0)return 'Исходное 0 · изменение '+(absolute>0?'+':'')+numberText(absolute);
+  const percent=absolute/base.mean*100;
+  return (percent>0?'+':'')+numberText(percent)+'% к исходному';
+}
+function renderPhase() {
+  const therapy=data.settings.therapyStart;
+  $('phase').textContent=therapy?(selectedDate>=therapy?'Неделя терапии '+(Math.floor(dayDiff(selectedDate,therapy)/7)+1):'До начала препарата · независимые наблюдения'):'Наблюдения · дата начала препарата не задана';
+  $('first-run').hidden=data.settings.configured;
+}
+function renderHistory() {
+  const dates=Object.keys(data.records).sort().reverse();$('history-count').textContent=dates.length+' записей';
+  $('recent-days').innerHTML=Array.from({length:7},(_,i)=>addDays(today(),i-6)).map(date=>{const row=data.records[date],draft=data.drafts[date];const status=draft?'Черновик':row?(ROLE==='olga'&&!row.observedEnough?'Мало наблюдений':'Заполнено'):'Нет записи';return `<button class="${draft?'draft':row?(ROLE==='olga'&&!row.observedEnough?'insufficient':'saved'):''}" data-date="${date}" aria-label="${escapeHTML(dateText(date)+': '+status)}">${Number(date.slice(-2))}<small>${draft?'черн.':row?(ROLE==='olga'&&!row.observedEnough?'мало':'✓'):'—'}</small></button>`;}).join('');
+  $('history-list').innerHTML=dates.length?dates.slice(0,historyLimit).map(date=>{const r=data.records[date];const summary=ROLE==='olga'&&!r.observedEnough?'Недостаточно наблюдений':ROLE==='alex'?`${numberText(r.values.intensity)} / 10 · ${numberText(r.values.episodes)} эп. · ${numberText(r.values.longest)} мин`:`${numberText(r.values.visible)} / 10 · атмосфера ${numberText(r.values.atmosphere)} / 10`;return `<button class="history-row" data-date="${date}"><span>${escapeHTML(dateText(date,true))}</span><small>${escapeHTML(summary)}</small></button>`;}).join(''):'<p class="muted">Записей пока нет. Начните с сегодняшнего дня.</p>';
+  $('more-history').hidden=dates.length<=historyLimit;
+}
+function metricTile(key,stats,base,closed,isBaseline) {
+  const [,label,unit]=FIELDS[ROLE].find(f=>f[0]===key),m=stats.metrics[key];return `<div class="metric-tile"><small>${escapeHTML(label)}</small><div class="metric-value">${numberText(m.mean)} <small>${escapeHTML(unit)}</small></div><small>${m.n} оценок из 7</small>${isBaseline?'':`<p class="metric-delta">${escapeHTML(delta(m,base?.metrics[key],closed))}</p>`}</div>`;
+}
+function renderStats() {
+  const list=periods(),prior=$('period-select').value;
+  $('period-select').innerHTML=list.slice().reverse().map(p=>`<option value="${p.key}">${escapeHTML(p.label+' · '+dateText(p.start,true)+' – '+dateText(p.end,true))}</option>`).join('');
+  if(list.some(p=>p.key===prior))$('period-select').value=prior;
+  const p=list.find(p=>p.key===$('period-select').value);
+  if(!p){$('stats-content').innerHTML='<p class="muted">Укажите даты наблюдения в настройках.</p>';return;}
+  const closed=p.end<today(),stats=summarize(p),baseP=list.find(p=>p.key==='baseline'),base=baseP?summarize(baseP):null;
+  const latestUpdate=Object.values(data.records).filter(r=>r.date>=p.start&&r.date<=p.end).sort((a,b)=>b.updatedAt.localeCompare(a.updatedAt))[0]?.updatedAt;
+  const lateUpdate=closed&&latestUpdate&&today(new Date(latestUpdate))>p.end;
+  let html=`<span class="report-tag">${closed?'Завершён':'Текущий · только свои данные'}</span><p class="muted">Полные измерения: ${stats.completeDays} из 7 дней${stats.partialDays?' · частичные: '+stats.partialDays:''}. ${ROLE==='olga'?'Дней с достаточными наблюдениями: '+stats.observedDays+'.':''}</p>${lateUpdate?'<p class="muted">Обновлено после завершения периода.</p>':''}<div class="metric-grid">${PRIMARY[ROLE].map(key=>metricTile(key,stats,base,closed,p.key==='baseline')).join('')}</div>`;
+  if(ROLE==='alex'&&data.settings.goal&&p.key!=='baseline'){const current=stats.metrics.intensity,b=base?.metrics.intensity;html+=`<p class="muted">Личная цель −30%: ${closed&&current.n>=5&&b?.n>=5&&b.mean>0?(current.mean<=b.mean*.7?'достигнута для этой недели':'пока не достигнута'):'пока недостаточно данных'}. Это личный ориентир, не медицинский критерий.</p>`;}
+  html+=`<details class="compact-details"><summary>Все мои показатели</summary><div class="table-wrap"><table><thead><tr><th>Показатель</th><th>Среднее</th><th>Оценок</th></tr></thead><tbody>${FIELDS[ROLE].map(([key,label,unit])=>`<tr><td>${escapeHTML(label)}</td><td>${numberText(stats.metrics[key].mean)} ${escapeHTML(unit)}</td><td>${stats.metrics[key].n} / 7</td></tr>`).join('')}${ROLE==='alex'?`<tr><td>Сумма эпизодов</td><td>${stats.metrics.episodes.n?numberText(stats.metrics.episodes.sum):'—'}</td><td>${stats.metrics.episodes.n} / 7</td></tr><tr><td>Дней с побочными эффектами</td><td>${stats.effectsDays}</td><td>${stats.effectsKnownDays} известных</td></tr>`:''}</tbody></table></div></details>`;
+  html+=`<details class="compact-details"><summary>Динамика моих недель</summary>${PRIMARY[ROLE].map(key=>chartHTML(key,list)).join('')}</details>`;
+  if(!closed)html+='<p class="muted">Совместное сравнение и экспорт этой недели появятся после её завершения по времени Bangkok.</p>';
+  else {
+    const peer=data.partner?.periods.find(other=>other.key===p.key&&other.start===p.start&&other.end===p.end);
+    const peerBase=data.partner?.periods.find(other=>other.key==='baseline');
+    html+=`<div class="comparison"><h3>Сравнение журналов</h3><p class="muted">Это разные измерения, отдельные шкалы.</p><h3>${NAME}</h3>${sharedTable(ROLE,stats,base,closed,p.key==='baseline')}<h3>${OTHER==='alex'?'Алекс':'Оля'}</h3>${peer?sharedTable(OTHER,peer,peerBase,closed,p.key==='baseline'):'<p class="muted">Итоги этой недели ещё не импортированы. Обменяйтесь файлами ниже.</p>'}</div>`;
+  }
+  $('stats-content').innerHTML=html;$('partner-status').textContent=data.partner?'Импортированы итоги '+(OTHER==='alex'?'Алекса':'Оли')+' · '+data.partner.periods.length+' периодов. Новый файл заменит эту копию.':'Итоги другого пользователя пока не загружены.';$('clear-partner').hidden=!data.partner;
+}
+function sharedTable(role,stats,base,closed,isBaseline){return `<div class="table-wrap"><table><thead><tr><th>Показатель</th><th>Среднее</th><th>Оценок</th></tr></thead><tbody>${SHARE_KEYS[role].map(key=>{const [,label,unit]=FIELDS[role].find(f=>f[0]===key),m=stats.metrics[key];return `<tr><td>${escapeHTML(label)}${isBaseline?'':`<small class="muted" style="display:block">${escapeHTML(delta(m,base?.metrics[key],closed))}</small>`}</td><td>${numberText(m.mean)} ${escapeHTML(unit)}</td><td>${m.n} / 7</td></tr>`;}).join('')}</tbody></table></div>`;}
+function chartHTML(key,list){const [,label]=FIELDS[ROLE].find(f=>f[0]===key);const points=list.slice(-8).map(p=>({p,m:summarize(p).metrics[key]}));const max=Math.max(1,...points.map(x=>x.m.mean??0));return `<h3>${escapeHTML(label)}</h3><div class="spark-chart" role="img" aria-label="${escapeHTML(label+': '+points.map(x=>x.p.label+' '+numberText(x.m.mean)).join('; '))}">${points.map(({p,m})=>`<div class="spark-item"><span>${numberText(m.mean)}</span>${m.mean==null?'<div class="missing-bar"></div>':`<div class="bar" style="height:${Math.max(2,m.mean/max*70)}px"></div>`}<small>${p.key==='baseline'?'Исх.':p.key.split('-')[1]}</small></div>`).join('')}</div><p class="muted">Номера недель · «—» означает отсутствие оценок.</p><div class="table-wrap"><table><thead><tr><th>Период</th><th>Среднее</th><th>Оценок</th></tr></thead><tbody>${points.map(({p,m})=>`<tr><td>${escapeHTML(p.label)}</td><td>${numberText(m.mean)}</td><td>${m.n} / 7</td></tr>`).join('')}</tbody></table></div>`;}
+function renderSettings(){ $('observation-start').value=data.settings.observationStart;$('therapy-start').value=data.settings.therapyStart;$('observation-start').max=today();$('therapy-start').max=today();$('personal-goal').checked=data.settings.goal;$('goal-label').hidden=ROLE!=='alex';$('backup-reminder').textContent=data.lastBackup?'Последняя копия сформирована '+dateText(data.lastBackup)+'. Рекомендуем скачивать её каждую неделю.':'Резервной копии ещё нет. Скачивайте её хотя бы раз в неделю и храните отдельно от телефона.'; }
+async function saveSettings(event){event.preventDefault();if(!flushDraft())return;const start=$('observation-start').value,therapy=$('therapy-start').value;if(!validDate(start)||start>today()||therapy&&(!validDate(therapy)||therapy>today())){notice('Проверьте даты: используйте уже наступившие дни начиная с 2000 года.',true);return;}const changed=start!==data.settings.observationStart||therapy!==data.settings.therapyStart;if(changed&&Object.keys(data.records).length&&!await askConfirm('Изменить даты? Периоды и сравнения пересчитаются; импортированные итоги будут очищены. Ваши записи сохранятся.'))return;try{transact(next=>{next.settings={observationStart:start,therapyStart:therapy,goal:ROLE==='alex'&&$('personal-goal').checked,configured:true};if(changed)next.partner=null;});renderSettings();renderStats();renderPhase();notice('Даты сохранены на этом устройстве. Укажите такие же на втором телефоне.');}catch(error){notice(error.message,true);}}
+function download(filename,content,type='application/json'){const blob=new Blob([content],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);return blob;}
+function weeklyPayload(){if(!data.settings.configured)throw Error('Сначала сохраните даты наблюдения.');const closed=periods().filter(p=>p.end<today()).map(p=>summarize(p)).filter(p=>p.savedDays>0);if(!closed.length)throw Error('Пока нет завершённых периодов с записями.');return {schema:'irritability-weekly',version:1,role:ROLE,settings:{observationStart:data.settings.observationStart,therapyStart:data.settings.therapyStart},generatedAt:new Date().toISOString(),periods:closed.map(p=>({key:p.key,start:p.start,end:p.end,label:p.label,savedDays:p.savedDays,observedDays:p.observedDays,completeDays:p.completeDays,partialDays:p.partialDays,metrics:Object.fromEntries(SHARE_KEYS[ROLE].map(key=>[key,p.metrics[key]]))}))};}
+async function exportWeekly(share=false){try{if(!flushDraft())return;const content=JSON.stringify(weeklyPayload(),null,2),filename=ROLE+'_weekly_'+today()+'.json';if(share&&navigator.canShare){const file=new File([content],filename,{type:'application/json'});if(navigator.canShare({files:[file]})){try{await navigator.share({files:[file],title:'Недельные итоги · '+NAME});return;}catch(error){if(error.name==='AbortError')return;}}}download(filename,content);notice('Файл завершённых недель сформирован. Передайте его другому пользователю.');}catch(error){notice(error.message,true);}}
+function cleanSettings(input){if(!input||!validDate(input.observationStart)||input.observationStart>today()||typeof input.therapyStart!=='string'||input.therapyStart&&(!validDate(input.therapyStart)||input.therapyStart>today()))throw Error('Некорректные даты в файле.');return {observationStart:input.observationStart,therapyStart:input.therapyStart,goal:input.goal===true,configured:input.configured!==false};}
+function cleanWeekly(input,role=OTHER){if(!input||input.schema!=='irritability-weekly'||input.version!==1||input.role!==role||!Array.isArray(input.periods)||input.periods.length>2000)throw Error('Нужен файл недельных итогов '+(role==='alex'?'Алекса':'Оли')+'.');const settings=cleanSettings(input.settings);const allowed=new Map(periods(settings).filter(p=>p.end<today()).map(p=>[p.key,p]));const seen=new Set();const clean=input.periods.map(row=>{const p=allowed.get(row.key);if(!p||p.start!==row.start||p.end!==row.end||seen.has(row.key))throw Error('Файл содержит неверный, повторный или незавершённый период.');seen.add(row.key);const metrics={};for(const key of SHARE_KEYS[role]){const m=row.metrics?.[key],def=FIELDS[role].find(f=>f[0]===key);if(!m||!Number.isInteger(m.n)||m.n<0||m.n>7||!Number.isFinite(m.sum)||m.sum<0||!Number.isSafeInteger(m.sum)||m.n===0&&m.sum!==0||def[3]&&m.sum>m.n*def[3])throw Error('Некорректные значения недельного отчёта.');metrics[key]={n:m.n,sum:m.sum,mean:m.n?m.sum/m.n:null};}for(const key of ['savedDays','observedDays','completeDays','partialDays'])if(!Number.isInteger(row[key])||row[key]<0||row[key]>7)throw Error('Некорректная полнота отчёта.');if(row.observedDays>row.savedDays||row.completeDays+row.partialDays!==row.observedDays||Object.values(metrics).some(m=>m.n>row.observedDays))throw Error('Некорректная полнота отчёта.');return {...p,savedDays:row.savedDays,observedDays:row.observedDays,completeDays:row.completeDays,partialDays:row.partialDays,metrics};});return {schema:'irritability-weekly',version:1,role,settings:{observationStart:settings.observationStart,therapyStart:settings.therapyStart},generatedAt:typeof input.generatedAt==='string'?input.generatedAt:'',periods:clean};}
+async function readJSON(file){if(!file)throw Error('Файл не выбран.');if(file.size>5*1024*1024)throw Error('Файл слишком большой (максимум 5 МБ).');return JSON.parse(await file.text());}
+async function importWeekly(event){try{if(!flushDraft())return;const peer=cleanWeekly(await readJSON(event.target.files[0]));const mismatch=peer.settings.observationStart!==data.settings.observationStart||peer.settings.therapyStart!==data.settings.therapyStart;if(mismatch&&!await askConfirm('Даты в итогах отличаются. Использовать даты из файла: наблюдение '+peer.settings.observationStart+', препарат '+(peer.settings.therapyStart||'не задан')+'? Свои записи сохранятся, итоги пересчитаются.'))return;transact(next=>{if(mismatch)next.settings={...next.settings,...peer.settings,configured:true};next.partner=peer;});renderSettings();renderStats();renderPhase();notice('Загружены только недельные итоги. Ваши записи не изменены.');}catch(error){notice('Не удалось импортировать: '+error.message,true);}finally{event.target.value='';}}
+function backup(){try{if(storageBlocked)throw Error('Хранилище недоступно: используйте «Скачать данные для восстановления».');const copy=JSON.parse(JSON.stringify(parseStore()));if(editingDirty)copy.drafts[selectedDate]={raw:rawForm(),baseRevision:loadedRevision,updatedAt:new Date().toISOString()};copy.lastBackup=today();download(ROLE+'_backup_'+today()+'.json',JSON.stringify({schema:'irritability-backup',...copy},null,2));try{transact(next=>next.lastBackup=today());}catch(error){/* Backup must remain possible even when local storage is full. */}renderSettings();notice('Резервная копия сформирована, включая текущий черновик. Проверьте файл в загрузках и сохраните отдельно.');}catch(error){notice(error.message,true);}}
+function cleanRecord(row,date){if(!row||row.date!==date||!validDate(date)||date>today()||typeof row.note!=='string'||row.note.length>500)throw Error('Некорректная запись в копии.');const clean={date,values:{},note:row.note};if(ROLE==='olga'&&typeof row.observedEnough!=='boolean')throw Error('Некорректный статус наблюдений.');for(const [key,,,max]of FIELDS[ROLE]){const v=row.values?.[key];if(v!==null&&(!Number.isSafeInteger(v)||v<0||max&&v>max))throw Error('Некорректное измерение: '+key);if(ROLE==='olga'&&!row.observedEnough&&v!==null)throw Error('День без наблюдений содержит оценки.');clean.values[key]=v;}if(ROLE==='alex'){if(clean.values.nightSleep!=null&&clean.values.daySleep!=null&&clean.values.nightSleep+clean.values.daySleep>1440)throw Error('Некорректная длительность сна.');const m=row.medication,s=row.sideEffects;if(!m||!['taken','not-taken','unknown'].includes(m.status)||typeof m.name!=='string'||m.name.length>100||m.status==='taken'&&(!m.name.trim()||!Number.isFinite(m.dose)||m.dose<=0))throw Error('Некорректная запись приёма.');clean.medication={status:m.status,name:m.status==='taken'?m.name:'',dose:m.status==='taken'?m.dose:null,missed:m.status==='not-taken'&&m.missed===true};if(!s||!['none','present','unknown'].includes(s.status)||typeof s.note!=='string'||s.note.length>500)throw Error('Некорректные побочные эффекты.');const symptoms={};if(s.status==='present'){for(const [key]of SYMPTOMS){const value=s.symptoms?.[key];if(value!=null){if(!Number.isInteger(value)||value<1||value>3)throw Error('Некорректная тяжесть симптома.');symptoms[key]=value;}}if(!Object.keys(symptoms).length)throw Error('Отсутствует отмеченный симптом.');}clean.sideEffects={status:s.status,symptoms,note:s.status==='present'?s.note:''};clean.coffee=typeof row.coffee==='string'&&(!row.coffee||/^([01]\d|2[0-3]):[0-5]\d$/.test(row.coffee))?row.coffee:'';}else clean.observedEnough=row.observedEnough;for(const key of ['createdAt','updatedAt']){if(typeof row[key]!=='string'||!Number.isFinite(Date.parse(row[key])))throw Error('Некорректное время записи.');clean[key]=new Date(row[key]).toISOString();}clean.revision=Number.isSafeInteger(row.revision)&&row.revision>0?row.revision:1;return clean;}
+function cleanDraft(draft){if(!draft||!draft.raw||typeof draft.raw!=='object'||typeof draft.updatedAt!=='string'||!Number.isFinite(Date.parse(draft.updatedAt)))throw Error('Некорректный черновик.');const raw=draft.raw,values={};for(const [key]of FIELDS[ROLE]){const val=raw.values?.[key];if(key==='nightSleep')values[key]={hours:String(val?.hours??'').slice(0,12),minutes:String(val?.minutes??'').slice(0,12)};else values[key]=String(val??'').slice(0,30);}const clean={values,unknown:FIELDS[ROLE].map(f=>f[0]).filter(k=>Array.isArray(raw.unknown)&&raw.unknown.includes(k)),note:String(raw.note||'').slice(0,500)};if(ROLE==='alex'){const m=raw.medication||{},s=raw.sideEffects||{};clean.medication={status:['taken','not-taken','unknown'].includes(m.status)?m.status:'',name:String(m.name||'').slice(0,100),dose:String(m.dose??'').slice(0,30),missed:m.missed===true};clean.sideEffects={status:['none','present','unknown'].includes(s.status)?s.status:'',symptoms:Object.fromEntries(SYMPTOMS.map(([key])=>[key,['0','1','2','3'].includes(String(s.symptoms?.[key]))?String(s.symptoms[key]):'0'])),note:String(s.note||'').slice(0,500)};clean.coffee=String(raw.coffee||'').slice(0,5);}else clean.observed=['yes','no'].includes(raw.observed)?raw.observed:'';return {raw:clean,baseRevision:draft.baseRevision==null?null:(Number.isSafeInteger(draft.baseRevision)?draft.baseRevision:null),updatedAt:new Date(draft.updatedAt).toISOString()};}
+async function restoreBackup(event){try{const input=await readJSON(event.target.files[0]);if(input.schema!=='irritability-backup'||input.version!==1||input.role!==ROLE||!input.records||Array.isArray(input.records)||!input.drafts||Array.isArray(input.drafts)||Object.keys(input.records).length>10000)throw Error('Нужна собственная резервная копия '+NAME+'.');const next=blankData();next.settings=cleanSettings(input.settings);for(const [date,row]of Object.entries(input.records))next.records[date]=cleanRecord(row,date);for(const [date,draft]of Object.entries(input.drafts)){if(!validDate(date)||date>today())throw Error('Некорректная дата черновика.');next.drafts[date]=cleanDraft(draft);}next.partner=input.partner?cleanWeekly(input.partner):null;if(next.partner&&(next.partner.settings.observationStart!==next.settings.observationStart||next.partner.settings.therapyStart!==next.settings.therapyStart))throw Error('Даты импортированных итогов не совпадают.');next.lastBackup=validDate(input.lastBackup)?input.lastBackup:null;if(!await askConfirm('Восстановить '+Object.keys(next.records).length+' записей? Текущие записи и черновики этого дневника будут заменены. Сначала скачайте свою копию, если она нужна.'))return;clearTimeout(draftTimer);localStorage.setItem(KEY,JSON.stringify(next));storageBlocked=false;data=next;editingDirty=false;await loadDate(today(),true);renderSettings();renderStats();notice('Резервная копия восстановлена на этом устройстве.');$('raw-recovery').hidden=true;}catch(error){notice('Восстановление не выполнено: '+error.message,true);}finally{event.target.value='';}}
+function csvCell(value){if(value===null||value===undefined)return '""';let text=String(value);if(typeof value==='string'&&/^\s*[=+\-@\t\r]/.test(text))text="'"+text;return '"'+text.replace(/"/g,'""')+'"';}
+function makeCSV(rows){return '\uFEFF'+rows.map(row=>row.map(csvCell).join(',')).join('\r\n');}
+function exportCSV(){try{if(!flushDraft())return;const fields=FIELDS[ROLE];const headers=['Дата',...(ROLE==='olga'?['Достаточно наблюдений']:[]),...fields.flatMap(([key,label,unit])=>[label+' ('+unit+')',label+': неизвестно']),...(ROLE==='alex'?['Факт приёма','Препарат','Доза мг','Пропуск','Побочные эффекты',...SYMPTOMS.map(s=>s[1]+': тяжесть 0–3'),'Комментарий о симптомах','Последний кофе']:[]),'Заметка','Создано UTC','Обновлено UTC'];const rows=Object.keys(data.records).sort().map(date=>{const r=data.records[date];return [date,...(ROLE==='olga'?[r.observedEnough?'Да':'Нет']:[]),...fields.flatMap(([key])=>[r.values[key],r.values[key]===null?'Да':'Нет']),...(ROLE==='alex'?[r.medication.status,r.medication.name,r.medication.dose,r.medication.missed?'Да':'Нет',r.sideEffects.status,...SYMPTOMS.map(([key])=>r.sideEffects.status==='unknown'?null:(r.sideEffects.symptoms[key]||0)),r.sideEffects.note,r.coffee]:[]),r.note,r.createdAt,r.updatedAt];});download(ROLE+'_daily.csv',makeCSV([headers,...rows]),'text/csv;charset=utf-8');notice('CSV сформирован из ваших сохранённых записей. Черновики в CSV не входят.');}catch(error){notice(error.message,true);}}
+function exportWeeklyCSV(){try{const payload=weeklyPayload();const rows=[['Пользователь','Период','Начало','Конец','Показатель','Среднее','Сумма','Оценок из 7']];for(const p of payload.periods)for(const [key,m]of Object.entries(p.metrics))rows.push([NAME,p.label,p.start,p.end,FIELDS[ROLE].find(f=>f[0]===key)[1],m.mean,m.n?m.sum:null,m.n]);download(ROLE+'_weekly.csv',makeCSV(rows),'text/csv;charset=utf-8');notice('CSV содержит только ваши агрегированные завершённые недели.');}catch(error){notice(error.message,true);}}
+async function deleteRecord(){if(!data.records[selectedDate]||!await askConfirm('Удалить свою запись за '+dateText(selectedDate)+'? Итоги пересчитаются.'))return;try{clearTimeout(draftTimer);transact(next=>{delete next.records[selectedDate];delete next.drafts[selectedDate];});editingDirty=false;await loadDate(selectedDate,true);renderStats();notice('Запись удалена на этом устройстве.');}catch(error){notice(error.message,true);}}
+async function discard(){if(!await askConfirm('Отменить несохранённые изменения за эту дату?'))return;try{clearTimeout(draftTimer);transact(next=>delete next.drafts[selectedDate]);editingDirty=false;await loadDate(selectedDate,true);}catch(error){notice(error.message,true);}}
+function openSection(id){$(id).open=true;$(id).scrollIntoView({block:'start'});}
+function bindEvents(){
+  $('daily-form').addEventListener('submit',saveRecord);$('record-date').addEventListener('change',e=>loadDate(e.target.value));$('previous').onclick=()=>loadDate(addDays(selectedDate,-1));$('next').onclick=()=>loadDate(addDays(selectedDate,1));$('today-button').onclick=()=>loadDate(today());$('setup-button').onclick=()=>openSection('settings-section');$('discard').onclick=discard;$('delete-record').onclick=deleteRecord;
+  $('history-section').addEventListener('click',e=>{const b=e.target.closest('[data-date]');if(b){loadDate(b.dataset.date);$('history-section').open=false;$('date-heading').scrollIntoView({block:'start'});}});$('more-history').onclick=()=>{historyLimit+=30;renderHistory();};$('period-select').onchange=renderStats;
+  document.querySelectorAll('.lower-sections>details').forEach(section=>section.addEventListener('toggle',()=>{if(section.open){document.querySelectorAll('.lower-sections>details').forEach(other=>{if(other!==section)other.open=false;});flushDraft();} $('save-bar').hidden=Boolean(document.querySelector('.lower-sections>details[open]'));}));
+  document.querySelectorAll('.back-to-form').forEach(button=>button.onclick=()=>{document.querySelectorAll('.lower-sections>details').forEach(d=>d.open=false);$('date-heading').scrollIntoView({block:'start'});});
+  $('settings-form').onsubmit=saveSettings;$('backup').onclick=backup;$('restore').onchange=restoreBackup;$('csv').onclick=exportCSV;$('weekly-csv').onclick=exportWeeklyCSV;$('share-weekly').onclick=()=>exportWeekly(true);$('export-weekly').onclick=()=>exportWeekly(false);$('import-weekly').onchange=importWeekly;
+  $('clear-partner').onclick=async()=>{if(await askConfirm('Удалить импортированные недельные итоги? Свои записи останутся.')){try{transact(next=>next.partner=null);renderStats();}catch(error){notice(error.message,true);}}};
+  $('delete-all').onclick=async()=>{if(!await askConfirm('Это удалит записи, черновики, настройки и импортированные итоги '+NAME+' только с этого устройства.', 'УДАЛИТЬ'))return;try{clearTimeout(draftTimer);localStorage.removeItem(KEY);storageBlocked=false;data=blankData();editingDirty=false;await loadDate(today(),true);renderSettings();renderStats();renderPhase();notice('Локальные данные этого дневника удалены.');}catch(error){notice(error.message,true);}};
+  $('raw-recovery').onclick=()=>{try{download(ROLE+'_recovery.txt',localStorage.getItem(KEY)||'','text/plain');}catch(error){notice(error.message,true);}};
+  $('persistent-storage').onclick=async()=>{try{const persisted=await navigator.storage?.persist?.();notice(persisted?'Chrome предоставил устойчивое хранение. Резервные копии всё равно нужны.':'Chrome не предоставил устойчивое хранение. Регулярно скачивайте резервную копию.');}catch(error){notice('Эта функция недоступна. Скачивайте резервные копии.');}};
+  window.addEventListener('pagehide',flushDraft);document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden')flushDraft();else{ $('record-date').max=today();$('next').disabled=selectedDate>=today();renderStats();renderPhase(); }});
+  window.addEventListener('storage',event=>{if(event.key===KEY)notice('Данные изменены в другом окне. Выберите дату заново, чтобы загрузить запись; текущая форма сохраняется как черновик.');});
+  window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();installPrompt=event;$('install').hidden=false;});$('install').onclick=async()=>{if(!installPrompt)return;await installPrompt.prompt();await installPrompt.userChoice;installPrompt=null;$('install').hidden=true;};window.addEventListener('appinstalled',()=>{$('install').hidden=true;notice('Дневник установлен. Открывайте его через значок на главном экране.');});
+}
+function updateConnectivity(){ $('offline-status').textContent=offlineReady?(navigator.onLine?'Готово к офлайн · записи на устройстве':'Без сети · дневник доступен офлайн'):(navigator.onLine?'Онлайн · офлайн-доступ ещё не готов':'Без сети · офлайн-доступ ещё не подтверждён'); }
+async function setupOffline(){
+  window.addEventListener('online',updateConnectivity);window.addEventListener('offline',updateConnectivity);
+  if(!('serviceWorker'in navigator)||!['https:','http:'].includes(location.protocol)){ $('offline-status').textContent='Локальный файл · для установки откройте ссылку GitHub Pages';return; }
+  try{
+    const reg=await navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(async error=>{const existing=await navigator.serviceWorker.getRegistration('./');if(existing)return existing;throw error;});
+    const check=async()=>{const ready=await navigator.serviceWorker.ready;const worker=ready.active;if(!worker)return;const channel=new MessageChannel();channel.port1.onmessage=event=>{offlineReady=event.data?.ready===true;updateConnectivity();};worker.postMessage({type:'CACHE_STATUS'},[channel.port2]);};
+    reg.addEventListener('updatefound',()=>{reg.installing?.addEventListener('statechange',()=>{if(reg.waiting&&navigator.serviceWorker.controller)$('update').hidden=false;});});
+    if(reg.waiting)$('update').hidden=false;
+    $('update').onclick=()=>{if(flushDraft()){if(reg.waiting){reg.waiting.postMessage({type:'SKIP_WAITING'});}else location.reload();}};
+    let reloading=false;navigator.serviceWorker.addEventListener('controllerchange',()=>{if(!reloading&&navigator.serviceWorker.controller){reloading=true;location.reload();}});
+    await check();updateConnectivity();
+  }catch(error){$('offline-status').textContent='Офлайн-доступ не готов · проверьте подключение';}
+}
+async function initialize(){
+  try{data=parseStore();const probe=KEY+':probe';localStorage.setItem(probe,'1');localStorage.removeItem(probe);}catch(error){data=blankData();storageBlocked=true;notice('Локальное хранилище недоступно или повреждено. Записи не будут перезаписаны. Можно восстановить резервную копию в настройках.',true);$('raw-recovery').hidden=false;}
+  renderForm();bindEvents();await loadDate(today(),true);renderSettings();renderStats();setupOffline();
+  if(!data.lastBackup&&Object.keys(data.records).length || data.lastBackup&&dayDiff(today(),data.lastBackup)>=7)notice('Пора скачать резервную копию. Она находится в разделе «Настройки и резервная копия».');
+}
+initialize();
+</script>
+</body>
+</html>
